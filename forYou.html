@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>For bella</title>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5F4B8BFF;
+}
+.wrapper{
+  display: flex;
+}
+.wrapper .statis{
+  color: black;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .bergerak{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.bergerak li{
+  list-style: none;
+  color: #E69A8DFF;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) ;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.bergerak li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 80px;
+}
+.bergerak li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #5F4B8BFF;
+  border-left: 2px solid #E69A8DFF;
+  animation: typing 3s steps(10);
+  animation-iteration-count: 4;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 20px);
+  }
+  100%{
+    left: 0;
+  }
+}
+ 
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+      *, *:before, *:after {  box-sizing: border-box; }
+    html { 
+      background: pink;
+      height: 100%; 
+      width: 100%; }
+
+    body { 
+      height: 100%; 
+      width: 100%; 
+      overflow:hidden;}
+
+    #envelope{
+    margin: 100px auto 0;
+    position: relative;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    border-style: solid;
+    border-width: 0 150px 100px 150px;
+    border-color: transparent transparent #256a98 transparent;
+    box-shadow: 0 100px 0 0 #256a98,
+              0 150px 90px 0 rgba(0,0,0,0.3);
+}
+
+#envelope:after,
+#envelope:before{
+  content:'';
+  display: block;
+  position: absolute;
+  top: 100px;
+  border-style: solid;
+}
+
+#envelope:after{
+  width: 0;
+  height: 0;
+  left: 0;
+  border-width: 100px 150px 100px 0;
+  border-color: transparent #2a7fb5 transparent transparent;
+}
+
+#envelope:before{
+  width: 210px;
+  height: 180px;
+  left:-150px;
+  border-width: 200px 0 0 300px;
+  border-color: transparent transparent transparent #3596da;
+}
+
+#envelope:hover #card {
+  top:-20px;
+}
+
+#card{
+  width:260px;
+  height: 220px;
+  position: absolute;
+  top:70px;
+  left:-130px;
+  z-index: -1;
+  background: #dcdcdc;
+  border-radius: 5px;
+  transition: top 0.5s ease-in-out;
+  font: bold 1em/0.9em 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 125px 0 60px 0;
+  color: black;
+  line-height: 1em;
+}
+
+#card p {
+  width: 150px;
+  margin: 0 auto;
+
+}
+
+#button{
+  top: 25px;
+  left: 90px;
+  right: -25px;
+  height: 50px;
+  width: 100px;
+ 
+  overflow: hidden;
+  position: absolute;
+}
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="statis">I Like</div>
+    <ul class="bergerak">
+      <li><span>Coding</span></li>
+      <li><span>llaollao</span></li>
+      <li><span>Milo</span></li>
+      <li><span>You bella bau taie</span></li>
+    </ul>
+  </div>
+
+
+<div id='envelope'>
+  <div id='card'>
+    <p>
+      ececece <br> bella cute <br> nah for u &#127801;  
+    </p>
+    <div id='button'>CLICK ME&hearts;</div>
+  </div>
+</div>
+<!-- partial -->
+
+</body>
+</html>
